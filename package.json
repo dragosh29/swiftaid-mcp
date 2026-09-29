@@ -1,0 +1,42 @@
+{
+  "name": "swiftaid-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Swiftaid Gift Aid automation: lets Claude, ChatGPT and other MCP clients check the API, a charity's on-boarding status, its Gift Aid claims, a donor's Swiftaid authorisation and the Gift Aid declaration for a donation, and (when enabled) register enduring declarations and file donations.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/e2e.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swiftaid",
+    "claude",
+    "gift-aid"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
+  },
+  "type": "module",
+  "bin": {
+    "swiftaid-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
